@@ -133,7 +133,9 @@
 
                     
 
-                    <a href="{{ route('cerrar') }}"><i class="fa fa-circle-o"></i>Cerrar</a>
+                    <a href="{{ route('cerrar') }}" class="btn bg-maroon margin"> Cerrar Cesión </a>
+
+                    <!--</button>  button type="button" class="btn bg-maroon margin">.btn.bg-maroon</button>-->
 
   
 
