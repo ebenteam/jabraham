@@ -2,6 +2,14 @@
 
 @section('content')
 
+<div class="login-box">
+  <div class="login-logo">
+    <a href="{{ url('/') }}"><b>INICIAR SESIÓN</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Ingresa tu correo y password</p>
+
 
 <form  method="POST" action="{{ route('login') }}">
   {{ csrf_field() }}
@@ -42,4 +50,5 @@
         <!-- /.col -->
       </div>
     </form>
+    <a href="{{ route('register') }}" class="text-center">Registro Nuevo</a>
 @endsection

@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function() {
   
 
     //Roles
-    Route::post('roles/store', 'RoleController@store')->name('roles.store')
+    Route::post('roles/guardar', 'RoleController@guardar')->name('roles.guardar')
         ->middleware('permission:roles.create');
 
     Route::get('roles', 'RoleController@index')->name('roles.index')

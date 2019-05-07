@@ -47,7 +47,7 @@
          <!-- mini logo for sidebar mini 50x50 pixels -->
          <span class="logo-mini"><b>JAH</b></span>
          <!-- logo for regular state and mobile devices -->
-         <span class="logo-lg"><b>Abraham</b>$</span>
+         <span class="logo-lg"><b>Abraham</b></span>
          </a>
 
       <!-- Header Navbar -->
@@ -132,12 +132,9 @@
                   <div class="pull-right">
 
                     
-
                     <a href="{{ route('cerrar') }}" class="btn bg-maroon margin"> Cerrar Cesión </a>
 
                     <!--</button>  button type="button" class="btn bg-maroon margin">.btn.bg-maroon</button>-->
-
-  
 
                   </div>
 
@@ -261,8 +258,8 @@
             <i class="menu-icon fa fa-fw fa-user-plus bg-red"></i>
 
             <div class="menu-info">
-              <h4 class="control-sidebar-subheading">Empleados</h4>
-              <p>Aqui asignas permisos a los cobradores</p>
+              <h4 class="control-sidebar-subheading">Usuarios</h4>
+              <p>Aqui asignas permisos a los usuarios</p>
             </div>
           </a>
           @endcan
