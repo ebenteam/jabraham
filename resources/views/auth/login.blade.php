@@ -4,7 +4,8 @@
 
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{ url('/') }}"><b>INICIAR SESIÓN</b></a>
+  <img src="{{asset('inicioweb/images/logob.png')}}">
+    <h3 style="color:white" href="{{ url('/') }}"><b>INICIAR SESIÓN</b></h3>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

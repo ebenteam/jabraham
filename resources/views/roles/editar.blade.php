@@ -7,7 +7,7 @@
     <section class="content-header">
       <h1>
         Modificar Permisos
-        <small>Modificar los permisos del Usuario</small>
+        <small>Modificar los permisos de empleado</small>
       </h1>
       		
     </section>

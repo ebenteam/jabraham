@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Caffeinated\Shinobi\Models\Role;
 use Caffeinated\Shinobi\Models\Permission;
 use Illuminate\Http\Request;
+use DB;
+
 
 class RoleController extends Controller
 {
@@ -69,7 +71,8 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         $permissions = Permission::get();
-        return view('roles.edit', compact('role', 'permissions'));
+
+        return view('roles.editar', compact('role', 'permissions', 'peroles'));
     }
 
     /**

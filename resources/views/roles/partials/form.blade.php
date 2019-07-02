@@ -1,53 +1,25 @@
 <div class="form-group">
-<label for="nombres">Nombres:</label>
-<div class="input-group">
-<div class="input-group-addon">
-<i class="fa fa-fw fa-user-plus"></i>
-</div>
-<input type="text" class="form-control" id="name" placeholder="Nombre" name="name" value="{{ old('name') }}"/>
-</div>
-<span class="text-red">{{ $errors->first('name') }}</span>
+{{ Form::label('name', 'Nombre:') }}
+{{ Form::text('name', null, ['class' => 'form-control']) }}
 </div>
 
 <div class="form-group">
-<label for="nombres">Direccion Corta:</label>
-<div class="input-group">
-<div class="input-group-addon">
-<i class="fa fa-fw fa-user-plus"></i>
-</div>
-<input type="text" class="form-control" id="slug" placeholder="Direccion Corta" name="slug" value="{{ old('slug') }}"/>
-</div>
-<span class="text-red">{{ $errors->first('slug') }}</span>
+{{ Form::label('slug', 'Direccion Corta:') }}
+{{ Form::text('slug', null, ['class' => 'form-control']) }}
 </div>
 
 <div class="form-group">
-<label for="nombres">Descripcion:</label>
-<div class="input-group">
-<div class="input-group-addon">
-<i class="fa fa-fw fa-user-plus"></i>
+{{ Form::label('description', 'Descripcion:') }}
+{{ Form::textarea('description', null, ['class' => 'form-control']) }}
 </div>
-<input type="textarea" class="form-control" id="description" placeholder="Descripcion" name="description" value="{{ old('description') }}"/>
-</div>
-<span class="text-red">{{ $errors->first('description') }}</span>
-</div>
-
 
 <hr>
 <h3>Permiso especial</h3>
 
 <div class="form-group">
-<div class="radio">
-<label>
-<input type="radio" name="special" value="all-access"> Acceso Total
-</label>
-<label>
-<input type="radio" name="special" value="no-access"> Ningun Acceso
-</label>
+<label>{{ Form::radio('special', 'all-access')}} Acceso Total</label>
+<label>{{ Form::radio('special', 'no-access')}} Ningun Acceso</label>
 </div>
-</div>
-
-
-
 
 <hr>
 <h3>Lista de permisos</h3>
@@ -56,7 +28,8 @@
     @foreach($permissions as $permission)
     <li>
         <label>
-        <input type="checkbox" name="{{'permissions[]'}}" value="{{ $permission->id }}">{{ $permission->name }}     
+           {{ Form::checkbox('permissions[]', $permission->id, null) }}
+           {{ $permission->name }}
            <em>({{ $permission->description ?: 'Sin descripcion' }})</em>
         </label>
     </li>
@@ -66,7 +39,5 @@
 
 
 <div class="form-group">
-<button type="submit" class="btn btn-warning">Crear</button>
+{{ Form::submit('Guardar', ['class' => 'btn btn-warning']) }}
 </div>
-
-

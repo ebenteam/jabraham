@@ -52,7 +52,7 @@ Route::middleware(['auth'])->group(function() {
     ->middleware('permission:roles.create');
 
     Route::put('roles/{role}', 'RoleController@update')->name('roles.update')
-    ->middleware('permission:roles.edit');
+    ->middleware('permission:roles.editar');
 
     Route::get('roles/{role}', 'RoleController@show')->name('roles.show')
     ->middleware('permission:roles.show');

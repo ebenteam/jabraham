@@ -51,6 +51,13 @@
                   <a class="btn btn-warning btn-flat" href="{{ route('users.edit',$user->id)}}"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i></a>    
                   @endcan
 
+                  @can ('users.destroy')
+                  {!! Form::open(['route' => ['users.destroy', $user->id ],
+                  'method' => 'DELETE']) !!} 
+                  <button class="btn btn-danger btn-flat"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i></button>
+                   {!! Form::close() !!}    
+                  @endcan
+
                   
 
                  

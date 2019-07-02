@@ -6,7 +6,7 @@
     <section class="content-header">
       <h1>
         Permisos
-        <small>Permisos definidos en el Sistema</small><td>
+        <small>Permisos definidos en el Sistema </small><td>
            @can ('roles.create')
           <a class="btn btn-warning" href="{{ route('roles.create')}}"><i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>Nuevo Permiso</a>
           @endcan
@@ -19,6 +19,8 @@
              <strong>{{ session('info') }}</strong>
            </div>
       @endif
+
+
     </section>
 
     <!-- Main content -->
@@ -52,6 +54,13 @@
                   @endcan
                   @can ('roles.edit')
                   <a class="btn btn-warning btn-flat" href="{{ route('roles.edit',$role->id)}}"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i></a>    
+                  @endcan
+
+                  @can ('roles.destroy')
+                  {!! Form::open(['route' => ['roles.destroy', $role->id ],
+                  'method' => 'DELETE']) !!} 
+                  <button class="btn btn-danger btn-flat"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i></button>
+                   {!! Form::close() !!}    
                   @endcan
 
                   
